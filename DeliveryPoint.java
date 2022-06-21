@@ -6,6 +6,10 @@ public class DeliveryPoint {
         this.point = point;
     }
 
+    public int[] getPoint() {
+        return point;
+    }
+
     public DeliveryPoint() {}
 
 }
