@@ -1,6 +1,6 @@
 public class DeliveryPoint {
 
-    int[] point = {9, 9};
+    int[] point = {};
 
     public int[] getDeliveryPoint() {
         return point;
@@ -11,9 +11,6 @@ public class DeliveryPoint {
     }
     public DeliveryPoint(int[] point) {
         this.point = point;
-    }
-
-    public DeliveryPoint() {
     }
 
 }

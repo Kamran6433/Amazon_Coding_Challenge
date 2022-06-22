@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Point {
 
-    public int[] point = {};
+    public int[] point = {0, 0};
     Neighbour neighbours;
 
     public int getPoint0() {

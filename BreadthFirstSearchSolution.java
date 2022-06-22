@@ -11,9 +11,11 @@ public class BreadthFirstSearchSolution {
 
         Grid grid = new Grid();
 //        System.out.println(Arrays.toString(grid.getLayout()));
-        Point start = new Point();
+        int[] startPoint = {0, 0};
+        Point start = new Point(startPoint);
 //        System.out.println(Arrays.toString(start.getPoint()));
-        DeliveryPoint end = new DeliveryPoint();
+        int[] endPoint = {9, 9};
+        DeliveryPoint end = new DeliveryPoint(endPoint);
 //        System.out.println(Arrays.toString(end.getPoint()));
         int[] point1 = {9, 7};
         int[] point2 = {8, 7};
@@ -38,20 +40,22 @@ public class BreadthFirstSearchSolution {
         HashSet<Point> visited = new HashSet<>();
         Queue<Point> queue = new LinkedList<>();
         queue.add(start);
+        Point current = new Point();
+        current.neighbours.addNewPointToNeighbour(current);
 
         while (!queue.isEmpty()) {
 
-            Point current = queue.remove();
-            Neighbour.addNewPointToNeighbour(current);
-            if (current.point == end.getPoint()) {
+            current = queue.remove();
+//            System.out.println("Neighbours in Current: " + current.neighbours.getNeighbour());
+            if (current.point == end.point) {
                 System.out.println(path);
                 return path;
             }
-            for (int i = 0; i < current.neighbours.size(); i++) {
-                int[] adjacentPoint = current.neighbours.get(i);
+            for (int i = 0; i < current.neighbours.getNeighbour().size(); i++) {
+                Point adjacentPoint = current.neighbours.getNeighbour().get(i);
                 if (!visited.contains(adjacentPoint)) {
-                    queue.add(current.neighbours.get(i));
-                    path.path.add(current.neighbours.get(i));
+                    queue.add(current.neighbours.getNeighbour().get(i));
+                    path.path.add(current.neighbours.getNeighbour().get(i));
                 }
             }
             visited.add(current);
