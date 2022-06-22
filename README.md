@@ -12,5 +12,5 @@ Peer Review - Stellah Mubayiwa
 
 I have understood the task at hand and the code review by the Amazon employee looks similar to what I have coded in this repository. All the obstacles match the obstacles in the challenge. 
 
-The structure of my code is confusing and there are classes thta i havent used or used very little of so maybe i could get rid of them.
+The structure of my code is confusing and there are classes that I haven't used or used very little of so maybe I could get rid of them.
 
