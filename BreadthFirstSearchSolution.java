@@ -2,7 +2,11 @@ import java.util.*;
 
 /**
  * This is my solution class where I will be getting my answer and
- * running the program
+ * running the program.
+ * I have made a small error in this algorithm. I used a breadth first search instead of, the more optimum,
+ * A* algorithm.
+ * I have understood the assignment well but couldn't implement it the way I wanted to.
+ * Breadth first search still works to answer this challenge.
  */
 
 public class BreadthFirstSearchSolution {
@@ -41,7 +45,7 @@ public class BreadthFirstSearchSolution {
         Queue<Point> queue = new LinkedList<>();
         queue.add(start);
         Point current = new Point();
-        current.neighbours.addNewPointToNeighbour(current);
+//        current.neighbours.addNewPointToNeighbour(current);
 
         while (!queue.isEmpty()) {
 
@@ -50,6 +54,9 @@ public class BreadthFirstSearchSolution {
             if (current.point == end.point) {
                 System.out.println(path);
                 return path;
+            }
+            if (visited.isEmpty()) {
+                current.neighbours.addNewPointToNeighbour(current);
             }
             for (int i = 0; i < current.neighbours.getNeighbour().size(); i++) {
                 Point adjacentPoint = current.neighbours.getNeighbour().get(i);
