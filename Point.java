@@ -2,8 +2,16 @@ import java.util.ArrayList;
 
 public class Point {
 
-    int[] point = {};
-    ArrayList<int[]> neighbours;
+    public int[] point = {};
+    Neighbour neighbours;
+
+    public int getPoint0() {
+        return point[0];
+    }
+
+    public int getPoint1() {
+        return point[1];
+    }
 
     public int[] getPoint() {
         return point;
@@ -13,31 +21,13 @@ public class Point {
         this.point = point;
     }
 
-    public ArrayList<int[]> getNeighbours() {
-        return neighbours;
+    public Point() {
+        neighbours = new Neighbour();
     }
 
     public Point(int[] point) {
-        neighbours = new ArrayList<>();
         this.point = point;
-        int row = point[0];
-        int column = point[1];
-        int[] north = {row, column + 1};
-        int[] east = {row + 1, column};
-        int[] south = {row, column - 1};
-        int[] west = {row -1, column};
-        if (!(north[0] < 0 || north[1] < 0)) {
-            neighbours.add(north);
-        }
-        if (!(east[0] < 0 || east[1] < 0)) {
-            neighbours.add(east);
-        }
-        if (!(south[0] < 0 || south[1] < 0)) {
-            neighbours.add(south);
-        }
-        if (!(west[0] < 0 || west[1] < 0)) {
-            neighbours.add(west);
-        }
+        neighbours = new Neighbour();
     }
 
 }

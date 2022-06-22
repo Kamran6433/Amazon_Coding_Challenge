@@ -42,6 +42,7 @@ public class BreadthFirstSearchSolution {
         while (!queue.isEmpty()) {
 
             Point current = queue.remove();
+            Neighbour.addNewPointToNeighbour(current);
             if (current.point == end.getPoint()) {
                 System.out.println(path);
                 return path;
@@ -56,8 +57,8 @@ public class BreadthFirstSearchSolution {
             visited.add(current);
 
         }
-
-        return ;
+        System.out.println("NULL");
+        return null;
     }
 
 }
