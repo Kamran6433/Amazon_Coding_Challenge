@@ -10,5 +10,7 @@ The steps I would take to make these improvements are to further research and un
 
 Peer Review - Stellah Mubayiwa
 
+I have understood the task at hand and the code review by the Amazon employee looks similar to what I have coded in this repository. All the obstacles match the obstacles in the challenge. 
 
+The structure of my code is confusing and there are classes thta i havent used or used very little of so maybe i could get rid of them.
 
